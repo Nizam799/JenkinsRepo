@@ -4,6 +4,7 @@ pipeline {
   stage ('Test') {
    steps {
     sh 'node --version'
+    }
    }
   stage ('build') {
   agent { docker { image 'node:16-alpine' } }
@@ -11,4 +12,5 @@ pipeline {
     sh 'git clone "https://github.com/Nizam799/JenkinsRepo.git" /home/snp/'
     }
    }
+ }
 }
