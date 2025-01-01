@@ -1,5 +1,5 @@
 pipeline {
- agent none
+ agent any
  stages {
   stage ('Test') {
   agent { docker { image 'node:16-alpine' } }
@@ -8,7 +8,6 @@ pipeline {
     }
    }
   stage ('build') {
-  agent { docker { image 'node:16-alpine' } }
    steps {
     sh '''sudo apt install git
     '''
