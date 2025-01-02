@@ -1,11 +1,17 @@
 pipeline {
-  agent { 
-    docker { image 'node:16-alpine' } 
-  }
+  agent any
   stages {
     stage ('Test') {
+      agent { 
+        docker { image 'node:16-alpine' } 
+      }
       steps {
        sh 'node --version'
+      }
+    }
+    stage('build') {
+      steps {
+        sh 'git clone https://github.com/nizam799/jenkinsrepo.git'
       }
     }
   }
