@@ -11,7 +11,7 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh 'git clone https://github.com/nizam799/jenkinsrepo.git /home/snp/'
+        sh 'git clone https://github.com/nizam799/jenkinsRepo.git /home/snp/'
       }
     }
   }
